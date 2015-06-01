@@ -42,7 +42,8 @@ public class App {
 		Person person;
 		// afectação e instanciação
 		person = new Person("Rui", 1); 
-		System.out.println("" );
+		
+		
 	}
 	
 }
