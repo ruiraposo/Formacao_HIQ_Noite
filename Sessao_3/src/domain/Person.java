@@ -1,5 +1,5 @@
 package domain;
 
-class Person {
-
+public class Person {
+	
 }

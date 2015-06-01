@@ -1,5 +1,7 @@
 package app;
 
-public class Employee {
+import domain.Person;
+
+public class Employee extends Person {
 
 }
