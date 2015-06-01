@@ -29,7 +29,7 @@ public class App {
 			// String aux =  ( i ==  args.length-1 ? "" : 1 );
 			
 			// isto é possivel
-			System.out.println( args[i] + ( i ==  args.length-1 ? new Person() : 1 ) );
+			System.out.println( args[i] + ( i ==  args.length-1 ? new Person( "Rui", 18) : 1 ) );
 			
 			if ( i ==  args.length-1 ){
 				System.out.print(args[i]);
@@ -38,6 +38,11 @@ public class App {
 			}
 		}
 		
+		// declaração
+		Person person;
+		// afectação e instanciação
+		person = new Person("Rui", 1); 
+		System.out.println("" );
 	}
 	
 }
