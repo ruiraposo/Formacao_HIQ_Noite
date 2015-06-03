@@ -1,0 +1,15 @@
+Caros, coloquei na minha pasta na área de transferência o material que utilizei para estudar para a certificação de Associate. O link é P:\_area de transferencia\bruno\SCJA.
+	A forma de usar esse material que recomendo é a seguinte:
+
+	- Ler a quantidade de vezes que vcs tiverem saco o PDF de UML. Ele é mto pequeno e é possível lê-lo em 5 minutos tranqüilamente. Há todo o necessário sobre UML para a prova nesse PDF.
+	
+	- O livro de J2ME é bem completo, mas para a prova, leitura dos 3 primeiros capítulos é mais que suficiente. Conhecendo razoavelmente as coisas desses 3 capítulos dá para fazer com folga as questões de J2ME. Há também uns datasheets de J2ME que coloquei ali também, mas se vcs quiserem, em 15-20 minutos posso dar uma passada geral sobre o conteúdo deles e creio que vcs não precisarão nem olhá-los.
+	
+	- Ler a seção 2.6 da especificação J2EE 1.4. Esta especificação é o arquivo j2ee-1_4-fr-spec.pdf. Esta seção fala sobre os serviços padrão J2EE, e é bem rápida de se ler, tem cerca de 10 páginas. Para conhecer melhor algumas coisas, eu dei uma lida na descrição de alguns desses serviços no tutorial de J2EE 1.4, que é o arquivo J2EETutorial_14.pdf. Não é necessário ler nada no tutorial não, eu li só para contextualizar melhor algumas coisas.
+
+	- A parte referente à prova de programmer eu não coloquei nada nessa pasta porque todos já possuem o material utilizado. As questões da prova de Associate que se referem ao conteúdo da prova de programmer são muito mais fáceis que na prova de programmer, não tem nem comparação.
+
+	Bom, qualquer dúvida, tamos aí. Esse material todo dá pra ser lido inteiramente em um final de semana com folga, e lendo isso vocês passam com o pé nas costas. Bons estudos então!
+
+	Atenciosamente,
+

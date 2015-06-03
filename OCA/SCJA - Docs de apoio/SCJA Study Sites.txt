@@ -1,0 +1,6 @@
+* Sun Certified Java Associate: Study Links
+- http://www.whizlabs.com/articles/scja-article.html
+- http://www.javacertificationexams.com/scja-study-guides.php
+- http://tech.groups.yahoo.com/group/Sun_Certified_Java_Associate/links
+- http://java.sun.com/developer/onlineTraining/distributed/
+- http://www.javablackbelt.com/Home.wwa

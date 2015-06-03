@@ -1,0 +1,280 @@
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>The K Virtual Machine</title>
+<meta name="collection" content="reference">
+<meta name="description" content="Extends the reach of Java technology into low-end network connected devices 
+Is a key component of the Java 2 Platform, Micro Edition (J2ME technology) environment 
+Is the smallest general purpose Java virtual machine offered by Sun Microsystems, Inc. 
+Offers superior savings in Java memory usage 
+Runs effectively on low power 16 bit or higher processors 
+Offers exceptional Java performance in resource-constrained devices" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="archive" content="false">
+<meta name="date" content="2003-04-12">
+<link rel="stylesheet" href="/css/default_developer.css" />
+
+
+<script type="text/javascript" language="JavaScript" src="/js/popUp.js"></script>
+<script language="javascript1.2" type="text/javascript" src="/js/sniff.js"></script>
+<script language="javascript1.2" type="text/javascript" src="/js/menucontent.js"></script>
+<script language="javascript1.2" type="text/javascript" src="/js/menucode.js"></script>
+<script language="javascript1.2" type="text/javascript" src="/js/developer.js"></script>
+
+
+</head>
+<!--stopindex-->
+<body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" rightmargin="0" bgcolor="#ffffff" onload="prepmenus(); done=true">
+
+<a name="top"></a>
+<!-- BEGIN GENERIC MASTHEAD -->
+
+
+<!-- BEGIN A1 COMPONENT V.0 -->
+<div class="a1 a1r2">
+<div class="a1v0">
+<a href="#skip2content" class="skiplink">Skip to Content</a>
+<span class="toolbarlinks">
+<a href="/global/mh/java/">Java</a>
+<a href="/global/mh/solaris/">Solaris</a>
+<a href="/global/mh/communities/" class="dividelink">Communities</a>
+<a href="http://developers.sun.com/global/my_profile.html">My SDN Account</a>
+<a href="http://developers.sun.com/global/join_sdn.html" class="dividelink">Join SDN</a>
+</span>
+</div>
+</div>
+<!-- END A1 COMPONENT V.0 -->
+
+
+
+<!-- BEGIN A2 COMPONENT V.1 -->
+<div class="a2w0">
+<div class="a2" id="a2v1">
+<div class="a2w1"><div class="a2w2"><div class="a2w3"><div class="a2w4">
+<div class="a2topiclinks">
+<div class="a2search">
+<form action="http://developers.sun.com/search/onesearch/index.jsp" accept-charset="utf-8" method="GET">
+<input type="hidden" name="charset" value="utf-8"><input type="hidden" name="col" value="developer-reference">
+<span class="rightarrowwhite">&raquo;</span>&nbsp;<a href="http://developers.sun.com/global/search_tips.html">search tips</a>&nbsp;
+<input class="searchfield" name="qt" class="medium" size="7" onFocus="if( this.value==this.defaultValue ) this.value=;" value="Search">
+<input id="searchbttn" type="image" border="0" src="/im/a2_bttn_search.gif" alt="Submit Search">
+</form>
+</div>
+<a href="http://java.sun.com" title="Home Page" id="sunlogo"><img src="/im/a.gif" alt="Home Page" width="98" height="58" border="0" /></a>
+<a href="http://developers.sun.com" title="Sun Developer Network"><img src="/im/a.gif" id="venuespacer" alt="Sun Developer Network" width="400" height="33" border="0" /></a>
+<ul id="mtopics">
+<li id="mtopic1"><a id="glink1" class="tpclink a2menu" title="See All APIs" href="/global/mh/api/index.html">APIs</a></li>
+<li id="mtopic2"><a id="glink2" class="tpclink a2menu" title="See All Downloads" href="/global/mh/downloads/index.html">Downloads</a></li>
+<li id="mtopic3"><a id="glink3" class="tpclink a2menu" title="See All Technologies &amp; Solutions" href="/global/mh/tech/index.html">Technologies</a></li>
+<li id="mtopic4"><a id="glink4" class="tpclink a2menu" title="See All Products" href="/global/mh/products/index.html">Products</a></li>
+<li id="mtopic5"><a id="glink5" class="tpclink a2menu" title="See All Support" href="/global/mh/support/index.html">Support</a></li>
+<li id="mtopic6"><a id="glink6" class="tpclink a2menu" title="See All Training" href="/global/mh/training/index.html">Training</a></li>
+<li id="mtopic7"><a id="glink7" class="tpclink a2menu" title="See All Sun.com" href="/global/mh/suncom/index.html">Sun.com</a></li>
+</ul>
+</div>
+</div></div></div></div>
+</div></div>
+<!-- END A2 COMPONENT V.1 -->
+
+
+
+
+
+
+
+
+
+<!-- END GENERIC MASTHEAD -->
+<!-- BEGIN BREADCRUMB -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="vatop">
+<tr>
+<td>      
+<div class="breadcrumb">
+<a href="http://developers.sun.com/index.html">Developers Home</a> &gt; <a href="http://developers.sun.com/prodtech/index.html">Products & Technologies</a> &gt; <a href="http://java.sun.com/index.jsp">Java Technology</a> &gt; <a href="http://java.sun.com/j2me/index.jsp">J2ME</a> &gt; <a href="http://java.sun.com/products/cldc/index.jsp">Connected Limited Device Configuration (CLDC); JSR 30, JSR 139</a> &gt; <a href="http://java.sun.com/products/cldc/reference/index.html">Reference</a> &gt; <a href="http://java.sun.com/products/cldc/reference/techart/index.html">Technical Articles and Tips</a> &gt;
+</div>
+</td>
+<td align="right" nowrap="nowrap"><div class="breadcrumb">
+</div></td></tr>
+<tr><td colspan="2"><img src="/im/a.gif" width="770" height="1" border="0" alt=" " /></td></tr>
+</table>
+<span class="sp5">&nbsp;</span><br />     
+<!-- END BREADCRUMB -->
+<!-- BEGIN PAGETITLE -->
+<div class="pagetitle2">Article</div>
+<div class="smallpagetitle"><h1>The K Virtual Machine</h1></div>
+<!-- END PAGETITLE -->
+<!-- BEGIN WRAPPER TABLE, 2 COLUMN, MAIN/RIGHT -->
+<table border="0" cellpadding="10" cellspacing="0" width="100%">
+<tr><td width="100%" valign="top">
+<!-- BEGIN CENTRAL COLUMN COMPONENTS -->
+<!--startindex-->
+<!-- ============ -->
+<!-- MAIN CONTENT -->
+<!-- ============ -->
+<a name="skip2content"></a>
+<!--  BEGIN VCD4 PFV  -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="smaller" valign="top"><em></em></td>
+<td width="10">&nbsp;</td>
+<td align="right" valign="bottom"><div class="sitelinks" style="padding:0px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="bottom" align="right">&nbsp;</td>
+<td valign="bottom" class="smaller" nowrap="nowrap"><a href="/jsp_utils/PrintPage.jsp" target="printFriendlyView" onclick="openPopup('','printFriendlyView',710,650,'no',1,1,0,0,0,0); return true;"><img src="/im/ic_print.gif" width="14" height="12" alt="Print-friendly Version" border="0" hspace="4" />Print-friendly Version</a><br></td>
+</tr></table></div>
+</td></tr>
+</table>
+<!--  END VCD4 PFV -->
+<SCRIPT language="JAVASCRIPT">
+<!--
+function openJava(html,name) {window.open(html,name,'scrollbars=0,resizable=1,width=180,height=255,status=0,location=0,toolbar=0,directories=0,menubar=0');
+}
+//-->
+</SCRIPT>
+<P ALIGN="RIGHT">
+</P>
+<P>
+<!-- Begin Page Data -->
+<P>
+<UL>
+<LI>
+Extends the reach of Java technology into low-end network
+connected devices</LI>
+<LI>
+Is a key component of the <A HREF="/j2me/index.jsp">Java 2 Platform, Micro Edition</A> (J2ME technology) environment</LI>
+<LI>
+Is the smallest general purpose Java virtual machine offered by Sun Microsystems,
+Inc.</LI>
+<LI>
+Offers superior savings in Java memory usage</LI>
+<LI>
+Runs effectively on low power 16 bit or higher processors</LI>
+<LI>
+Offers exceptional Java performance in resource-constrained devices</LI>
+</ul>
+<H3>The Market Need</H3>
+<P><BR>As we continue into the post-PC era, the market for network-connected
+devices continues to grow at an enormous rate. While new classes
+of devices like smart cellular telephones, pagers, and PDAs proliferate,
+traditional consumer electronics including televisions, VCRs, CD players,
+and game machines are getting smarter and adding new capabilities. Whether devices are new or more powerful versions of existing products, all are becoming increasingly interconnected over a network.
+<P>In the four years since Sun's introduction of the Java platform, Java
+technology has become the platform of choice for getting work done on the
+network. With the advent of the PersonalJava, and the EmbeddedJava application environments, and other Java technologies, the benefits of Java technology use were extended into screen phones, set-top boxes, and even into deeply embedded devices. Nevertheless, while Java product offerings like Java 2 soffware and the PersonalJava application environment have enabled the introduction of Java technology into many markets, there has remained an enormous need and opportunity for leveraging Java technology into the rapidly growing market for low-end network devices--devices that are characterized by severe restrictions on processing power and available memory.
+<P>In order to provide compelling Java technology solutions for manufacturers
+building devices across the spectrum--from palmtop to desktop--Sun has introduced the Java 2 Platform, Micro Edition and the K virtual machine.
+<BR>
+<BR>
+<H3>The Solution --Java 2 Micro Edition and The KVM</H3>
+<P>The Java 2 Platform, Micro Edition (J2ME technology), is a new Java framework for the deployment and use of Java technology in the post-PC world. The J2ME environment is a very small Java application environment that Sun will provide in configurations suitable for different market segments. Built in to this core platform is the capability to receive not just application code, but libraries that form part of the Java 2 platform itself. In this way a Java 2 ME environment can be dynamically configured to provide the environment the consumer needs to run an application, regardless of whether all the Java technology based libraries necessary to run the application were present on the device when it shipped. Configuration is performed by server software running on the network.</P>
+<P>To further enhance the value of the Java 2 ME environment and ensure
+a thriving community of independent software vendors, Sun will allow industry groups to define Java technology-based profiles specific to their industry. These profiles are collections of Java technology-based APIs, built on top of the J2ME environment, that define a Java technology-based platform suited to an industry or class of device. As the J2ME environment is itself very small, industries have great flexibility in defining only what they need for a class of device
+so that, for example, a profile targeted at the wireless market and utilizing
+the K virtual machine (VM) can retain a very small footprint. Furthermore, profiles built on top of the J2ME environment guarantee independent software vendors that consumer devices possess certain minimum capabilities. Nonetheless, if a developer wishes to provide an application that requires more capability than is offered in a profile, the network service provider can provide that capability at run-time utilizing the J2ME environment's ability to configure dynamically.</P>
+<P>The foundation of the Java 2 Platform, Micro Edition on devices like cellular telephones, pagers, and small point of sale systems is the K virtual machine.
+<BR>
+<H3>The K Virtual Machine</H3>
+<P>A Java virtual machine is the foundation for Java technology, allowing
+applications written in the Java programming language to be portable across
+different hardware environments and operating systems. The virtual machine
+mediates between the application and the underlying platform, converting
+the application's bytecodes into machine-level code appropriate for the
+hardware and operating system being used. In addition to governing
+the execution of an application's bytecodes, the virtual machine handles
+related tasks such as managing the system's memory, providing security
+against malicious code, and managing multiple threads of program execution.<P>In order to meet the market need for a very small footprint Java implementation, the KVM was designed to overcome three key technical challenges: reducing the size of the virtual machine and class libraries themselves, reducing the memory utilized by the virtual machine during execution, and allowing for components of the virtual machine to be configured to suit particular devices (for example, by allowing pluggable garbage collection).</P>
+<P>The KVM design team employed a number of strategies in overcoming these technical challenges. One of these strategies was to enable the partitioning of virtual machine capabilities. The team also architected the byte code interpreter and garbage collector to minimize dynamic memory usage, and carefully implemented the virtual machine and libraries to minimize their size (e.g. by rolling Java Native Interface calls into the VM itself).</P>
+<BR>
+<P>The results of the careful design and implementation are readily apparent:
+<BR>
+<UL>
+<LI>
+<B><I>Reduced VM Size</I></B> - the K virtual machine is currently only 50-80 K of object code in its standard configuration, depending on target platform and compilation options.</LI>
+<BR>
+<LI>
+<B><I>Reduced Memory utilization</I></B> - In addition to the K virtual
+machine's small object size, it requires only a few tens of kilobytes of
+dynamic memory to run effectively. Because of the reduced VM
+size and memory utilization, even with total memory available of only 128K
+the K virtual machine enables useful Java technology-based applications
+to run on a device.</LI>
+<BR>
+<LI>
+<B><I>Performance</I></B> - the K virtual machine is able to run effectively
+on 16 bit processors clocked as low as 25 MHz, and can scale smoothly up
+to much more powerful 32 bit processors.</LI>
+<BR>
+<LI>
+<B><I>Portability</I></B> - although implemented in native code for extra performance, the K virtual machine has a highly portable architecture that reduces system dependencies to a minimum. Even multi-threading and garbage collection have been implemented in a completely system-independent manner, enabling speedy porting to any host platform.</LI>
+</ul>
+<H3>For More Information</H3>
+<P>For more information on the K Virtual Machine and how it can help enable
+your device, please visit our website at <A HREF="/products/cldc/index.jsp">http://java.sun.com/products/cldc/</A></P>
+<P>All information contained in this document is subject to change.</P>
+<!-- =================== -->
+<!-- END OF MAIN CONTENT -->
+<!-- =================== -->
+<!--stopindex-->
+<!-- END CENTRAL COLUMN COMPONENTS -->
+</td><td valign="top">
+<!-- BEGIN RIGHT COLUMN COMPONENTS -->
+<!-- END RIGHT COLUMN COMPONENTS -->
+</td></tr>
+<!-- BEGIN SPACER ROW -->
+<tr><td><img src="/im/a.gif" width="560" height="1" border="0" alt=" " /></td><td><img src="/im/a.gif" width="170" height="1" border="0" alt=" " /></td></tr>
+<!-- END SPACER ROW -->
+</table>
+<!-- END WRAPPER TABLE, 2 COLUMN, MAIN/RIGHT -->
+<!-- BEGIN VNV5 FOOTER  -->
+<table border="0" cellpadding="0" cellspacing="10" width="100%">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="vatop">
+<tr>
+<td colspan="4" valign="top" class="grey3"><img src="/im/a.gif" width="1" height="2" border="0" alt="" /></td></tr>
+<tr>
+<td><img src="/im/a.gif" width="190" height="1" border="0" alt="" /><br />
+<a href="http://www.sun.com"><img src="/im/logo_sun_small_sdn.gif" width="61" height="29" border="0" alt="" vspace="5"/></a></td>
+<td width="100%" valign="top"><img src="/im/a.gif" width="350" height="1" border="0" alt="" /><br />
+<div class="footer">
+<a href="http://developers.sun.com/global/aboutsun.html">About Sun</a> &nbsp;|&nbsp;
+<a href="http://developers.sun.com/global/aboutsdn.html">About This Site</a> &nbsp;|&nbsp;
+<a href="http://developers.sun.com/global/newsletters.html">Newsletters</a> &nbsp;|&nbsp;
+<a href="http://developers.sun.com/global/contact.html">Contact Us</a> &nbsp;|&nbsp;
+<a href="http://developers.sun.com/global/employment.html">Employment</a><br />
+<a href="http://developers.sun.com/global/howtobuy.html">How to Buy</a> &nbsp;|&nbsp;
+<a href="http://developers.sun.com/global/licensing.html">Licensing</a> &nbsp;|&nbsp;
+<a href="http://developers.sun.com/global/termsofuse.html">Terms of Use</a> &nbsp;|&nbsp;
+<a href="http://developers.sun.com/global/privacy.html">Privacy</a> &nbsp;|&nbsp;
+<a href="http://developers.sun.com/global/trademarks.html">Trademarks</a>
+<br /><span class="sp10">&nbsp;</span><br />
+<br /><span class="sp10">&nbsp;</span><br />
+Copyright 1994-2006 Sun Microsystems, Inc.
+</div></td>
+<td><img src="/im/a.gif" width="40" height="1" border="0" alt="" /></td>
+<td valign="top"><div class="footer"><b><a href="http://developers.sun.com/global/aboutsdn.html">A Sun Developer Network Site</a></b></div>
+<div class="footer">
+<img src="/im/a.gif" width="170" height="1" border="0" alt="" /><br />
+Unless otherwise licensed, code in all technical manuals herein (including articles, FAQs, samples) is provided under this <a href="http://developers.sun.com/global/berkeley_license.html">License</a>.
+<br /><span class="sp5">&nbsp;</span><br />
+<a href="http://developers.sun.com/global/rss_sdn.html"><img src="/im/button_xml.gif" width="36" height="14" align="top" border="0" alt="XML" /></a>&nbsp;<a href="http://developers.sun.com/global/content_feeds.html">Content Feeds</a>
+</div></td></tr>
+<tr><td colspan="4" valign="top" class="grey3"><img src="/im/a.gif" width="1" height="2" border="0" alt="" /></td></tr>
+</table>
+</td></tr>
+</table>
+<!-- END VNV5 FOOTER -->
+</body>
+<script language="JavaScript" src="/js/omi/jsc/s_code_remote.js"></script></html>
+
+
+
