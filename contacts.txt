@@ -13,3 +13,5 @@ ricardo.sousa
 http://www.examcollection.com/
 
 github.com/challengeit/Formacao_HIQ_Noite
+
+http://www.blackwasp.co.uk/SOLIDPrinciples.aspx
