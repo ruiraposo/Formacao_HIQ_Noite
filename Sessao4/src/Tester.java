@@ -16,6 +16,7 @@ public class Tester {
 		Integer i = 10;
 		Integer j = 11;
 		Integer k = ++i;
+		String s;
 		System.out.println(j == k);
 		System.out.println(j.equals(k));
 		

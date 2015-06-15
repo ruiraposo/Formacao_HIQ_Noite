@@ -1,4 +1,4 @@
-para enviar para repositório (cloud):
+﻿para enviar para repositório (cloud):
 git push
 
 para receber do repositório (cloud):
@@ -9,3 +9,5 @@ git log
 lara.santos@challenge.pt
 diogo.matos
 ricardo.sousa
+
+http://www.examcollection.com/
